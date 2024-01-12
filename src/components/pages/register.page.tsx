@@ -31,7 +31,8 @@ const SignUp: FC = () => {
       dispatch(setError(''));
     }
     setLoading(true);
-    dispatch(signup({ email, password, firstName }, () => setLoading(false)));
+    // Assuming you have a name property, you might want to set it to an empty string or handle it appropriately.
+    dispatch(signup({ email, password, firstName, name: '' }, () => setLoading(false)));
   }
 
   return (
@@ -70,4 +71,4 @@ const SignUp: FC = () => {
   );
 }
 
-export default SignUp
+export default SignUp;
